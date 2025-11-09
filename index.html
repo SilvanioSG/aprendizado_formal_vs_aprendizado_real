@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<!DOCTYPE html><html lang="pt-BR"><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Aprendizado Formal vs Aprendizado Real — Dados Brasil</title>
-
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-
   <style>
     :root{
       --primary:#27628d;
@@ -30,14 +26,46 @@
     }
 
     .custom-header{
+      /* Modificação no CSS do header para flexbox e alinhamento */
       background:linear-gradient(135deg,var(--primary),#17425d);
       color:#fff;
       padding:18px 16px;
       text-align:center;
       font-size:0.98rem;
+      display:flex; /* Adicionado */
+      flex-direction:column; /* Adicionado */
+      align-items:center; /* Adicionado */
+      justify-content:center; /* Adicionado */
     }
     .custom-header a{ color:#c0e0ff; text-decoration:none; margin-left:8px; }
     .custom-header a:hover{ text-decoration:underline; }
+    
+    /* Novo estilo para o perfil e a imagem */
+    .author-info{ 
+        margin-top:10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .author-profile img {
+        width: 80px; /* Tamanho base */
+        height: 80px;
+        border-radius: 50%; /* Deixa a imagem redonda */
+        border: 4px solid #fff; /* Borda branca para destacar */
+        object-fit: cover;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .author-links {
+        margin-top: 5px;
+        font-size: 0.9rem;
+    }
+    .author-links a {
+        display: inline-block;
+        margin: 0 4px;
+    }
+
 
     .main-content{
       flex:1;
@@ -132,14 +160,22 @@
       .main-title{ font-size:1.6rem }
       .card h3{ font-size:1.6rem }
       .chart-frame{ height:360px }
+      .author-profile img { width: 60px; height: 60px; border-width: 3px; } /* Ajuste de tamanho para telas menores */
     }
   </style>
 </head>
 <body>
   <header class="custom-header">
-    Silvanio Gois — Técnico em Administração e Edificações | Graduando em Processos Gerenciais
-    <a href="mailto:sg@silvaniogois.com.br">sg@silvaniogois.com.br</a>
-    <a href="https://www.silvaniogois.com.br" target="_blank" rel="noopener">www.silvaniogois.com.br</a>
+    <div class="author-profile">
+      <img src="Executivo_sg_projetos.PNG" alt="Foto de Silvanio Gois" />
+    </div>
+    <div class="author-info">
+        <strong>Silvanio Gois</strong>Técnico em Administração e Edificações | Graduando em Processos Gerenciais
+        <div class="author-links">
+            sg@silvaniogois.com.br
+            <a href="https://www.silvaniogois.com.br" target="_blank" rel="noopener">www.silvaniogois.com.br</a>
+        </div>
+    </div>
   </header>
 
   <main class="main-content">
@@ -185,8 +221,7 @@
         <tbody>
           <tr><td>Objetivo</td><td>Transmitir teoria e conceitos</td><td>Resolver problemas do dia a dia e gerar valor imediato</td></tr>
           <tr><td>Atualização</td><td>Lenta (processos institucionais)</td><td>Ágil (treinamentos curtos, on-the-job, microlearning)</td></tr>
-          <tr><td>Reconhecimento</td><td>Diplomas e certificados</td><td>Portfólio, certificações técnicas e experiência</td></tr>
- </tr>
+          <tr><td>Reconhecimento</td><td>Diplomas e certificados</td><td>Portfólio, certificações técnicas e experiência</td></tr> </tr>
         <tr>
           <td>Motivação</td>
           <td>Obrigação acadêmica</td>
@@ -218,7 +253,7 @@
   </main>
 
   <footer class="custom-footer">
-    © 2025 Silvanio Gois — Todos os direitos reservados — 
+    © 2025 Silvanio Gois — Todos os direitos reservados —
     <a href="https://www.silvaniogois.com.br" target="_blank" rel="noopener">Retornar ao site</a>
   </footer>
 
